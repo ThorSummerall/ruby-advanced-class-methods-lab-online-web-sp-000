@@ -34,11 +34,16 @@ class Song
         return x
       end
     end
+<<<<<<< HEAD
     return nil
+=======
+    return false
+>>>>>>> 0997369da232effb187a8d4d5ccc6e6a4be47caa
   end
 
   def self.find_or_create_by_name(name)
     find_song = Song.find_by_name(name)
+<<<<<<< HEAD
     if find_song != nil
       return find_song
     else
@@ -90,4 +95,13 @@ class Song
   def self.destroy_all
     @@all = []
   end
+=======
+    if (find_song = !nil)
+      return find_song
+    else
+      new_tune = Song.create_by_name(name)
+      return new_tune
+    end
+  end
+>>>>>>> 0997369da232effb187a8d4d5ccc6e6a4be47caa
 end
